@@ -7,7 +7,7 @@ class CreateCategories < ActiveRecord::Migration
       t.integer :position
       t.string :meta_title
       t.text :meta_description
-      t.keywords :meta
+      t.text :meta_keywords
 
       t.timestamps null: false
     end
