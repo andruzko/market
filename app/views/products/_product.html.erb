@@ -1,0 +1,16 @@
+<div class="col-md-3">
+  <div class="product">
+    <div class="product-image">
+      <%= link_to (image_tag product.image_url(:small)), product if product.image? %>
+      <div class="product-price">
+        Price: <%= number_to_currency(product.price, precision: 2, separator: ',') %>
+      </div>
+    </div>
+    <div class="product-title">
+      <%= link_to product.title, product %>
+    </div>
+    <div class="product-action text-center">
+      <%= button_to 'Buy', line_items_path(product_id: product), class: 'btn-buy' %>
+    </div>
+  </div>
+</div>
