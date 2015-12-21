@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'line_iterms/create'
+
+  get 'carts/show'
+
   resources :line_items
   get 'cart' => 'carts#show'
   devise_for :admin_users, ActiveAdmin::Devise.config
